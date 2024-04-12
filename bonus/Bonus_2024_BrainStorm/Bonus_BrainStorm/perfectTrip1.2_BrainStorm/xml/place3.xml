@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<places>
+    <Place PlaceID="18">
+        <nameOfPlace>Central Park</nameOfPlace>
+        <description>A large public park in New York City</description>
+        <UrlLandmark>586</UrlLandmark>
+        <PriceLevel>medium</PriceLevel>
+         <cityOfPlace>NYC</cityOfPlace>
+    	 <CountryCode>456</CountryCode>
+    </Place>
+    <Place PlaceID="17">
+        <nameOfPlace>Eiffel Tower</nameOfPlace>
+        <description>An iconic iron lattice tower in Paris</description>
+        <UrlLandmark>308</UrlLandmark>
+        <PriceLevel>high</PriceLevel>
+       <cityOfPlace>PAR</cityOfPlace>
+   	 <CountryCode>121</CountryCode>
+    </Place>
+    <Place PlaceID="16">
+        <nameOfPlace>Sydney Opera House</nameOfPlace>
+        <description>An architectural masterpiece in Sydney</description>
+        <UrlLandmark>200</UrlLandmark>
+        <PriceLevel>high</PriceLevel>
+        <cityOfPlace>NYC</cityOfPlace>
+  	    <CountryCode>456</CountryCode>
+    </Place>
+    <Place PlaceID="14">
+        <nameOfPlace>Taj Mahal</nameOfPlace>
+        <description>An iconic white marble mausoleum in Agra</description>
+        <UrlLandmark>7000</UrlLandmark>
+         <PriceLevel>high</PriceLevel>
+       <cityOfPlace>YYZ</cityOfPlace>
+    <CountryCode>321</CountryCode>
+    </Place>
+    <Place PlaceID="15">
+        <nameOfPlace>Machu Picchu</nameOfPlace>
+        <description>An ancient Incan citadel in Peru</description>
+        <UrlLandmark>4000</UrlLandmark>
+         <PriceLevel>low</PriceLevel>
+         <cityOfPlace>ROM</cityOfPlace>
+   		 <CountryCode>535</CountryCode>
+    </Place>
+    <Place PlaceID="45">
+    	<nameOfPlace>oren hotel</nameOfPlace>
+    	<description>an oren hotel</description>
+    	<UrlLandmark>800</UrlLandmark>
+    	<PriceLevel>high</PriceLevel>
+    	<cityOfPlace>ROM</cityOfPlace>
+    	<CountryCode>535</CountryCode>
+    	</Place>
+    <Hotel PlaceID="46">
+   <nameOfPlace>hotel hotely</nameOfPlace>
+    <description>very good</description>
+    <UrlLandmark>960</UrlLandmark>
+    <PriceLevel>high</PriceLevel>
+    <cityOfPlace>YYZ</cityOfPlace>
+    <CountryCode>321</CountryCode>
+    <starsRating>4</starsRating>
+  </Hotel>
+
+  <Resturant PlaceID="47">
+   <nameOfPlace>oren resturant</nameOfPlace>
+    <description>very good</description>
+    <UrlLandmark>960</UrlLandmark>
+    <PriceLevel>high</PriceLevel>
+    <cityOfPlace>YYZ</cityOfPlace>
+    <CountryCode>321</CountryCode>
+    <starsRating>5</starsRating>
+    <kitchenStyles>israel</kitchenStyles>
+  </Resturant>
+    	
+</places>
