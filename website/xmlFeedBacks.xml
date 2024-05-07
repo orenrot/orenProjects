@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <FeedBack>
+    <UserId>אורן</UserId>
+    <ProductId>11</ProductId>
+    <YourFeedBack>5</YourFeedBack>
+    <Description>מדהים</Description>
+  </FeedBack>
+  <FeedBack>
+    <UserId>אורן</UserId>
+    <ProductId>11</ProductId>
+    <YourFeedBack>5</YourFeedBack>
+    <Description>מדהים</Description>
+  </FeedBack>
+  <FeedBack>
+    <UserId>אורן</UserId>
+    <ProductId>11</ProductId>
+    <YourFeedBack>5</YourFeedBack>
+    <Description>מדהים</Description>
+  </FeedBack>
+  <FeedBack>
+    <UserId>אורן</UserId>
+    <ProductId>14</ProductId>
+    <YourFeedBack>4</YourFeedBack>
+    <Description>המוצר מעולה</Description>
+  </FeedBack>
+  <xs:element name="FeedBack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UserId" type="xs:string">
+        </xs:element>
+        <xs:element name="ProductId" type="xs:string">
+        </xs:element>
+        <xs:element name="YourFeedBack" type="xs:int">
+        </xs:element>
+        <xs:element name="Description" type="xs:string">
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

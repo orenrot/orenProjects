@@ -1,0 +1,244 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<!--https://stackoverflow.com/questions/908765/how-to-link-html-pages-in-same-or-different-folders-->
+    <title></title>
+    <style type="text/css">
+
+    a
+    {
+        font-size:40px;
+        color:White;
+       background-color:aqua; 
+    }
+        td {
+            font-size: 40px;
+            color:red;
+            /*   border:groove;
+            background-image: url('/pic/Disney-Logo-Walt-Disney2.jpg');*/
+        }
+    html
+    {
+   /*     background:url('pic/lion.jpeg');
+            height: 100%; 
+     Center and scale the image nicely 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    }
+        body {
+            background: url('/pic/disney-desktop-wallpapers-10.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /*      width:200px;
+  height:200px; */
+            cursor: url(gifs/Winnie%20the%20Pooh.ani), auto;
+            /* <img src="gifs/114415.gif" /> בכרום
+  עובד רק באקספלור  באופן מלא
+  */
+            /*
+     בשביל שהתמונה תהיה בגודל מלא על כל המסך כל הזמן גם אם נגדיל ונקטין את המסך
+
+     */
+            /*-moz-background-size: cover;
+      
+   וגם מולחט מה התמונת רקע
+   ושיהיה מתוקן
+   שלא יהיו חזרות
+   ושיהיה כרקע
+   עושה את התמונת מסך אותו גודל מלא על כל המסך גם כשמשנים את יחס של המסך מ 100 ל 200
+   */
+            /* cursor: url('gifs/tumblr_inline_oybanyWRzo1uz3yzl_540.gif'),
+//  auto;*/
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body    id="bg"   style="width:100%; height:100%; text-align:center;color:Orange; font-size:50px; font-family:Aharoni" >
+       
+    <script type="text/javascript">
+        function check() {
+            var a = window.prompt("אתה בטחו שאתה רוצה להיתנתק? כן/לא"); //משתנה עם שאלה שיקלט במשתנה זה תשמר התשובה של המשתמש
+            if (a == 'לא')
+               location.href="~/homepage.aspx";//אם לא ישלח לדף הבית ולא ינותק
+            if (a == 'כן')
+                location.href = "/generalInfo/logout.aspx"; //אם כן אז ינותק
+        }
+        window.onload =  function (){document.getElementById("1").play();
+        }
+    </script>
+    <form id="form1" runat="server">
+    <div >
+     <table  style="width:100%; height:100%; text-align:right" >
+        <tr >
+                  <td>
+		  <canvas id="canvas" >
+</canvas>
+          </td>
+            <td colspan="7" >
+             </td>
+            <td> <img width="300px" height="150px" src="/logo/logoMickey.png" /></td>
+   
+        </tr>
+   
+        <tr style="color:Blue; height:40px;font-size:18px">
+            
+           
+            <td style="width:267px">
+                <a href="/Homepage.aspx" >בית</a>
+            </td>
+            
+            <td style="width:267px" >
+                <a href="/generalInfo/informationpage1.aspx" >דפי מידע</a>
+            </td>
+            <td style="width:267px">
+                 <a href="/generalInfo/gallery.aspx">גלריה </a>
+            </td>
+            <td style="width:267px">
+                <a href="/generalInfo/links.aspx" >קישורים</a>
+            </td>
+                <td style="width:267px; color:White">
+             <%if ((Session["Option"] != null && (int)Session["Option"] > 0) || Session["category"] == "admin")// כל מי שמתחבר לאתר יוכל לראות סרטים
+                   Response.Write("<td style='width:267px; font-size:40px; color:White'><a href=/users/viewer.aspx> סרטים </a></td>");
+            %>
+            </td>
+ 
+            <td style="width:267px; font-size:40px; color:White">
+             <%if (Session["category"] == "admin")
+                   Response.Write("שלום, מנהל");
+               else if (Session["username"] != null)
+                   Response.Write("שלום, " + Session["username"]);
+               else
+                   Response.Write("שלום, אורח");
+            %>
+            </td>
+            <%if (Session["category"] == "user" || Session["category"] == "admin")
+                  Response.Write("<td><a onclick=check()  >ליציאה</a></td>");//יש רק פעולה כי אם יש משהו של קשור לדוגמה אז הוא עושה ישר את הקישור שליחה לעמוד מסוים 
+              else
+              {  
+                  Response.Write("<td style='width:267px; font-size:40px; color:White'><a href=/generalInfo/login.aspx>התחברות </a></td>");
+                  Response.Write("<td style='width:267px; font-size:40px; color:White'><a  href=/generalInfo/register.aspx>הירשם</a></td>");
+              }
+                 %>
+
+
+                 <%
+                     if (Session["category"] != "admin")
+                         Response.Write("");
+                     else
+                         Response.Write("<td style='width:267px; font-size:40px; color:White'><a href=/admin/ShowAllDataList.aspx>עמוד מנהל</a></td>");
+                       %>
+
+                        <%
+                            if (Session["Option"] != null && (int)Session["Option"] > 2)//אם ספק
+                                Response.Write("<td style='width:267px; font-size:40px; color:White'><a href=/users/Prodcuts.aspx>הכנסת מוצרים</a></td>");           
+                            %>
+                       <%
+                           if (Session["category"] == "user")
+                               Response.Write("<td style='width:267px; font-size:40px; color:White'><a href=/users/UsersChangeInfo.aspx>עמוד משתמש</a></td>");           
+                            %>
+           
+         </tr>
+    </table>
+        
+                           <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="true" 
+            onselectedindexchanged="DropDownList2_SelectedIndexChanged" >
+            <asp:ListItem>כל מה שמתחת זה האפשרויות שלך לאתר</asp:ListItem>
+            </asp:DropDownList>
+     
+
+   
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+	<script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		var radius = canvas.height / 2;
+		ctx.translate(radius, radius);
+		radius = radius * 0.90//גודל רדיוס השעון
+		setInterval(drawClock);//שיתחיל את השעון אחרי שנייה
+
+		function drawClock() {//שיציר הכול
+			drawFace(ctx, radius);
+			drawNumbers(ctx, radius);
+			drawTime(ctx, radius);
+		}
+
+		function drawFace(ctx, radius) {//ציור השעון
+			var grad;
+			ctx.beginPath();
+			ctx.arc(0, 0, radius, 0, 2 * Math.PI);//גודל השעון
+			ctx.fillStyle = 'lightblue';
+			ctx.fill();//ממלא את כל חלל השעון
+			grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);//איך המחוגים יראו  האם הלבן יכסה חלק מהם שיקשה לצפיה או לא
+			grad.addColorStop(0, '#333');//הוספת צבע
+			grad.addColorStop(0.5, 'blue');//הוספת צבע לשעון
+			grad.addColorStop(1, '#333');//הוספת צבע לשעון
+			ctx.strokeStyle = grad;//לשמירת כל השעון שיהיה לו את כל הסטייל המבוקש
+			ctx.lineWidth = radius * 0.1;//אורך הפס המעוגל
+			ctx.stroke();//מפעיל עיצוב רקע לשעון הפס המעוגל
+			ctx.beginPath();//מתחיל את המחוגים והרקע שיש להם
+			ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+			ctx.fillStyle = '#333';//צבע רקע
+			ctx.fill();//ממלא את החלל של השעון
+		}
+
+		function drawNumbers(ctx, radius) {//לציור כל המספרים כמו שנראה לעין
+			var ang;
+			var num;
+			ctx.font = radius * 0.15 + "px arial";
+			ctx.textBaseline = "middle";//לעיצוב המספרים
+			ctx.textAlign = "center";//לעיצוב המספרים
+			for (num = 1; num < 13; num++) {
+				ang = num * Math.PI / 6;//לחילוק השעות כמו שצריך
+				ctx.rotate(ang);
+				ctx.translate(0, -radius * 0.85);//עיצוב השעות
+				ctx.rotate(-ang);//עיצוב השעות
+				ctx.fillText(num.toString(), 0, 0);//עיצוב השעות
+				ctx.rotate(ang);//עיצוב השעות
+				ctx.translate(0, radius * 0.85);//מרחק השעות אחד מהשני
+				ctx.rotate(-ang);//לדאוג לסיבוב נכון
+			}
+		}
+
+		function drawTime(ctx, radius) {//מצייר את הזמן שעות דקות יודע כמה זמן יש בשעה ומה לעשות עם המידע
+			var now = new Date();
+			var hour = now.getHours();
+			var minute = now.getMinutes();
+			var second = now.getSeconds();
+			//hour
+			hour = hour % 12;
+			hour = (hour * Math.PI / 6) +
+			(minute * Math.PI / (6 * 60)) +
+			(second * Math.PI / (360 * 60));//שהשעות יזוזו כמו שצריך
+			drawHand(ctx, hour, radius * 0.5, radius * 0.07);//מחוג שעות
+			//minute
+			minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));//שהדקותו כמו שצריך
+			drawHand(ctx, minute, radius * 0.8, radius * 0.07);//מחוג דקות
+			// second
+			second = (second * Math.PI / 30);//שהשניות יזוזו כמו שצריך
+			drawHand(ctx, second, radius * 0.9, radius * 0.02);//מחוג שניות
+		}
+
+		function drawHand(ctx, pos, length, width) {//יוצר מחוגים
+			ctx.beginPath();//מתחיל
+			ctx.lineWidth = width;//אורך
+			ctx.lineCap = "round";
+			ctx.moveTo(0, 0);
+			ctx.rotate(pos);
+			ctx.lineTo(0, -length);//שיהיה בגבולות השעון
+			ctx.stroke();
+			ctx.rotate(-pos);//שהמחוגים של השעון ינועו בהדרגה ולא השעון יסתובב
+		}
+	</script>
+</body>
+</html>

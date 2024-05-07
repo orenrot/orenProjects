@@ -1,0 +1,16 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="YourFeedBackForProduct.aspx.cs" Inherits="YourFeedBackForProduct" %>
+
+<%@ Register src="WhichProductToWriteTheRevivew.ascx" tagname="WhichProductToWriteTheRevivew" tagprefix="uc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+     <uc1:WhichProductToWriteTheRevivew ID="WhichProductToWriteTheRevivew1"  runat="server" />
+    <asp:TextBox ID="txtLoveHate" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtDescribe" runat="server"></asp:TextBox>
+    <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtLoveHate" runat="server" MinimumValue="1" MaximumValue="5" ErrorMessage="RangeValidator"></asp:RangeValidator>
+    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtDescribe" ValidationExpression="\W{2,150}"  runat="server" ErrorMessage="RegularExpressionValidator"></asp:RegularExpressionValidator>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+</asp:Content>
+

@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "1.12.18 2007", ".", "{477A6344-002A-43BC-9B5D-738001A86E77}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/1.12.18 2007"
+		Debug.AspNetCompiler.PhysicalPath = "F:\אתר 5 יחידות יב\new\1.12.18 2007\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\1.12.18 2007\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/1.12.18 2007"
+		Release.AspNetCompiler.PhysicalPath = "F:\אתר 5 יחידות יב\new\1.12.18 2007\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\1.12.18 2007\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53508"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "new1", "..\..\new1\", "{7906BE64-9DDF-4FD2-A4CA-6BE5979FF293}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/new1"
+		Debug.AspNetCompiler.PhysicalPath = "F:\אתר 5 יחידות יב\new1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\new1\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/new1"
+		Release.AspNetCompiler.PhysicalPath = "F:\אתר 5 יחידות יב\new1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\new1\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53698"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "new2", "..\..\new2\", "{32CA367D-C499-4E4C-AFD1-51C6CF23B870}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/new2"
+		Debug.AspNetCompiler.PhysicalPath = "F:\אתר 5 יחידות יב\new2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\new2\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/new2"
+		Release.AspNetCompiler.PhysicalPath = "F:\אתר 5 יחידות יב\new2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\new2\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53699"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{477A6344-002A-43BC-9B5D-738001A86E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{477A6344-002A-43BC-9B5D-738001A86E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7906BE64-9DDF-4FD2-A4CA-6BE5979FF293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7906BE64-9DDF-4FD2-A4CA-6BE5979FF293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32CA367D-C499-4E4C-AFD1-51C6CF23B870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32CA367D-C499-4E4C-AFD1-51C6CF23B870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

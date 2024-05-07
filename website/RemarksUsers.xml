@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Remarks2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UserId" type="xs:string">
+        </xs:element>
+        <xs:element name="Remark" type="xs:string">
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <Remarks2>
+    <UserId>דג</UserId>
+    <Remark>123</Remark>
+  </Remarks2>
+</xs:schema>-->
+<Remarks2>
+  <Remarks>
+    <Id>דוד</Id>
+    <Remark>כגד</Remark>
+  </Remarks>
+  <Remarks>
+    <Id>אורן</Id>
+    <Remark>dsfahkjijhfds</Remark>
+  </Remarks>
+  <Remarks>
+    <Id>אורן</Id>
+    <Remark>243</Remark>
+  </Remarks>
+  <id name="UserId" type="string">
+  </id>
+  <Remark name="Remark" type="string">
+  </Remark>
+</Remarks2>
+<!-- xs - תחילת אקסמל סכמה-->

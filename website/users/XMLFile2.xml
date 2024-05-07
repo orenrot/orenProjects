@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="usesInfo">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="DateId" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="BuyerId" type="xs:string" minOccurs="0" />
+                <xs:element name="ProductId" type="xs:string" minOccurs="0" />
+                <xs:element name="amount" type="xs:int" minOccurs="0" />
+                <xs:element name="StartPrice" type="xs:string" minOccurs="0" />
+                <xs:element name="SalePerrcent" type="xs:string" minOccurs="0" />
+                <xs:element name="StatusOffer" type="xs:string" minOccurs="0" />
+                <xs:element name="StatusDescription" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <usesInfo>
+    <DateId>2018-10-29T21:46:47+02:00</DateId>
+    <BuyerId>דוד</BuyerId>
+    <ProductId>213</ProductId>
+    <amount>1</amount>
+    <StartPrice>81</StartPrice>
+    <SalePerrcent xml:space="preserve"> </SalePerrcent>
+    <StatusOffer>1</StatusOffer>
+    <StatusDescription xml:space="preserve"> </StatusDescription>
+  </usesInfo>
+  <usesInfo>
+    <DateId>2019-06-12T09:43:27+03:00</DateId>
+    <BuyerId>דוד</BuyerId>
+    <ProductId>5352</ProductId>
+    <amount>10</amount>
+    <StartPrice>1560</StartPrice>
+    <SalePerrcent xml:space="preserve"> </SalePerrcent>
+    <StatusOffer>2</StatusOffer>
+    <StatusDescription xml:space="preserve"> </StatusDescription>
+  </usesInfo>
+</NewDataSet>

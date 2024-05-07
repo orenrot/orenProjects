@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        
+        string c = TextSearch.Text;
+        if (DropDownList2.SelectedItem.Value == "aliexpress")
+            Process.Start("https://www.aliexpress.com/w/wholesale-toy.html?spm=2114.search0104.0.0.45dc5ff3bcu10U&initiative_id=SB_20190411020822&site=glo&groupsort=1&SortType=price_asc&g=y&SearchText=" + c);
+        if (DropDownList2.SelectedItem.Value == "ebay")
+            Process.Start("https://www.ebay.com/sch/i.html?_from=R40&_nkw=" + c + "&_sacat=0&_sop=15");
+        if (DropDownList2.SelectedItem.Value == "amazon")
+            Process.Start("https://www.amazon.com/s?k=" + c + "&s=price-asc-rank&qid=1554977615&ref=sr_st_price-asc-rank");
+        if (DropDownList2.SelectedItem.Value == "gearbest")
+            Process.Start("https://www.gearbest.com/" + c + "-_gear/?odr=low2high");
+        if (DropDownList2.SelectedItem.Value == "all")
+        {
+            Process.Start("https://www.aliexpress.com/w/wholesale-toy.html?spm=2114.search0104.0.0.45dc5ff3bcu10U&initiative_id=SB_20190411020822&site=glo&groupsort=1&SortType=price_asc&g=y&SearchText=" + c);
+            Process.Start("https://www.ebay.com/sch/i.html?_from=R40&_nkw=" + c + "&_sacat=0&_sop=15");
+            Process.Start("https://www.amazon.com/s?k=" + c + "&s=price-asc-rank&qid=1554977615&ref=sr_st_price-asc-rank");
+            Process.Start("https://www.gearbest.com/" + c + "-_gear/?odr=low2high");
+        }
+    }
+}

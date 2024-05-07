@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Xml;
+using System.IO;
+
+public partial class YourFeedBackForProduct : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["username"] == null)
+            return;
+        else
+            Label1.Text = Session["username"].ToString();
+    }
+    void InsertRemarks()//הכנסת פדבקים לאקסמל
+    {
+        if (Session["username"] == null || (int)Session["Option"] < 1)
+            return;
+        XmlElement UserId, ProductId, FeedBack, YourFeedBack, Description;
+        XmlDocument doc = new XmlDocument(); // אובייקט יצירתXML
+        string XMLfile = Server.MapPath("xmlFeedBacks.xml");
+        doc.Load(XMLfile);//טעינת קובץ החדשות 
+        //לשנות לחדש למה שמתאים
+        UserId = doc.CreateElement("UserId");// למשתמש  חדש  
+        ProductId = doc.CreateElement("ProductId");// למשתמש הערה חדשה חדש  
+        FeedBack = doc.CreateElement("FeedBack");
+        YourFeedBack = doc.CreateElement("YourFeedBack");
+        Description = doc.CreateElement("Description");
+        UserId.InnerText = Label1.Text;// הכנסת טקסט לאלמנט המשתמש 
+        ProductId.InnerText = WhichProductToWriteTheRevivew1.ToString();// הכנסת טקסט לאלמנט המשתמש 
+        YourFeedBack.InnerText = txtLoveHate.Text;// הכנסת טקסט לאלמנט המשתמש 
+        Description.InnerText = txtDescribe.Text;
+        FeedBack.AppendChild(UserId);
+        FeedBack.AppendChild(ProductId);
+        FeedBack.AppendChild(YourFeedBack);
+        FeedBack.AppendChild(Description);
+        doc.DocumentElement.InsertBefore(FeedBack, doc.DocumentElement.FirstChild);
+        FileStream fsxml = new FileStream(XMLfile, FileMode.Truncate, FileAccess.Write, FileShare.ReadWrite);
+        doc.Save(fsxml);
+        fsxml.Close();//לסגירה של הקובץ
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        InsertRemarks();
+    }
+}
