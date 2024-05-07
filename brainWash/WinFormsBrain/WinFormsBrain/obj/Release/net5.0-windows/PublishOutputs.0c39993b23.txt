@@ -1,0 +1,11 @@
+C:\Users\Admin\Downloads\newbesr\WinFormsBrain.exe
+C:\Users\Admin\Downloads\newbesr\WinFormsBrain.dll
+C:\Users\Admin\Downloads\newbesr\WinFormsBrain.deps.json
+C:\Users\Admin\Downloads\newbesr\WinFormsBrain.runtimeconfig.json
+C:\Users\Admin\Downloads\newbesr\WinFormsBrain.pdb
+C:\Users\Admin\Downloads\newbesr\System.Data.SqlClient.dll
+C:\Users\Admin\Downloads\newbesr\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\Downloads\newbesr\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\Downloads\newbesr\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\Downloads\newbesr\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Downloads\newbesr\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
